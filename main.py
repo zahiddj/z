@@ -19,7 +19,7 @@ def start(update: Update, context):
 def answer(update: Update, context):
     message = update.message.text.lower()
     for question in questions:
-        if question.lower() == message:
+        if question.lower() in message:
             update.message.reply_text(questions[question])
             return
     update.message.reply_text("Sorry, I don't know the answer to that question. Please ask another question.")
@@ -28,7 +28,8 @@ def error(update: Update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
 def main():
-    token = "5648103386:AAGb2tlYazkxTI3OVJp5khtTFOq6DVWL8eU"  # replace this with your own token
+    # Replace this with your own token
+    token = "5648103386:AAGb2tlYazkxTI3OVJp5khtTFOq6DVWL8eU"  
 
     updater = Updater(token, use_context=True)
 
