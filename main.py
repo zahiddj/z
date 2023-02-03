@@ -28,7 +28,7 @@ def error(update: Update, context):
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
 def main():
-    token = "YOUR_BOT_TOKEN_HERE"  # replace this with your own token
+    token = "5648103386:AAGb2tlYazkxTI3OVJp5khtTFOq6DVWL8eU"  # replace this with your own token
 
     updater = Updater(token, use_context=True)
 
